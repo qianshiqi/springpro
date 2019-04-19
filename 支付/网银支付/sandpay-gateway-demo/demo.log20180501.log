@@ -1,0 +1,433 @@
+[INFO ] 2018-05-01 10:51:45,636 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>18349995 已加载
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 10:51:45,652 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 10:51:46,074 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","operatorId":"","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","orderCode":"2018050110514570","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502105145","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501105145","method":"sandpay.trade.pay","mid":"18349995","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 10:51:46,121 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 10:51:47,402 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 10:51:47,408 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DOsezq3JfZeBbZ46Uis9nF4txGVzoHSQiyLww%2FQfFmNYMjtig3OdYWJb4aaFoFLyI2Rih3SgOik%2BDjzWHHf7O9Ar1CeuairRFhIlsEvEGQfm2%2Bp54qnE0%2B5IroENxRqoVhwolzQkk8OiwRRT%2F4RtrfVi7yW946EDc9kHOVvMInpQo0wSt1VeyINhO%2FMS7PuTttxCjl6gUNcE8XaKm77J9b2kwWOrLwCc0y4lgreEQ8wL4JEdP3irDJ1wa0s1H63akZJ3UqAhsjnhQGZB3IZDKKjB4CqjaJnB5rN9oSO0HAFj5NNO%2F4ojROpiv%2B1igp51CoWBzg6EXhtMJV879oV4sJw%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501105145%22%2C%22respMsg%22%3A%22%E8%AE%A2%E5%8D%95%E5%88%9B%E5%BB%BA%E5%A4%B1%E8%B4%A5%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22030013%22%7D%2C%22body%22%3A%7B%7D%7D
+[INFO ] 2018-05-01 10:51:47,408 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 10:51:47,424 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[030013]
+[INFO ] 2018-05-01 10:51:47,424 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[订单创建失败]
+[INFO ] 2018-05-01 10:51:47,424 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{},
+	"head":{
+		"respCode":"030013",
+		"respMsg":"订单创建失败",
+		"respTime":"20180501105145",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 10:52:32,689 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 10:52:32,971 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","operatorId":"","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","orderCode":"2018050110523264","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502105232","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501105232","method":"sandpay.trade.pay","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 10:52:32,986 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 10:52:34,158 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 10:52:34,167 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3Dmwzq9yFyJOaRQkxzFnPpla0%2FxseXgxzqzU1wWnXMnwjCajJpRS2RjqegqnTFo8UMucD5XLtE5nk8TpWwoWh4fnXvY2sCnbgYkalwtnqE9M0BwMid1eK45P44ACnV4iyaqTJ2giVoGXHfv4OcRFLstQPWmo2VEo%2F%2FcwIawmcOSLg1YCBzrdTpR1FldNTbyVtfRHlQTxxIwwNQ6Txdem1snZYW4rK%2BuMnhP2qOI%2BF2knBMbDPUCj08imAdQUBpvgowm4Sev34aJ76QFceKilY40JJ88wvZ3VlQVMSr1j8oIVLQ4FQl8oLl1t3qYhq9c%2B%2FxZjHcKXLlHeId23Dg3FGzaw%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501105232%22%2C%22respMsg%22%3A%22%E6%88%90%E5%8A%9F%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22000000%22%7D%2C%22body%22%3A%7B%22totalAmount%22%3Anull%2C%22clearDate%22%3Anull%2C%22credential%22%3A%22%7B%5C%22submitUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2FallChannelPayAdapter%5C%22%2C%5C%22payMode%5C%22%3A%5C%22bank_pc%5C%22%2C%5C%22params%5C%22%3A%7B%5C%22bizType%5C%22%3A%5C%22000201%5C%22%2C%5C%22realSumbitUrl%5C%22%3A%5C%22http%3A%2F%2F172.28.247.112%3A8091%2Fbaffle-fjunionpay%2Funionpay%2FfrontTransReq%5C%22%2C%5C%22txnSubType%5C%22%3A%5C%2201%5C%22%2C%5C%22backUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A9988%2Frequest%2FfjUnionpayInternetBankNotify%5C%22%2C%5C%22signature%5C%22%3A%5C%22WWoak0pMP%2B4k78ZVk1OTuDOfVnl9xXeCJ4tuL%2BR2NiksvfJHYBRYL6L%2BERtzLdrR61TxT%2BiM6S1NecDUKc5DN%2FY61pskBziA0kEAQSziKCBPnh3wakL3INJjglGGIYTAbvwNbdTB%2BEKBZBnXu%2FSX60Mi8gsQeN6QzAYWrg%2FG1yo%3D%5C%22%2C%5C%22orderId%5C%22%3A%5C%22WG20180501071049300000000000004%5C%22%2C%5C%22issInsCode%5C%22%3A%5C%22ABC%5C%22%2C%5C%22merName%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22txnType%5C%22%3A%5C%2201%5C%22%2C%5C%22frontUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2Fgateway%2Fapi%2Forder%2Fnotice%2FallChannelPay%5C%22%2C%5C%22channelType%5C%22%3A%5C%2207%5C%22%2C%5C%22certId%5C%22%3A%5C%2240220995861346480087409489142384722381%5C%22%2C%5C%22acqInsCode%5C%22%3A%5C%2248272900%5C%22%2C%5C%22encoding%5C%22%3A%5C%22UTF-8%5C%22%2C%5C%22version%5C%22%3A%5C%225.0.0%5C%22%2C%5C%22merAbbr%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22accessType%5C%22%3A%5C%220%5C%22%2C%5C%22txnTime%5C%22%3A%5C%2220180501105232%5C%22%2C%5C%22merId%5C%22%3A%5C%22777290058112148%5C%22%2C%5C%22merCatCode%5C%22%3A%5C%225811%5C%22%2C%5C%22currencyCode%5C%22%3A%5C%22156%5C%22%2C%5C%22txnAmt%5C%22%3A%5C%221%5C%22%2C%5C%22signMethod%5C%22%3A%5C%2201%5C%22%7D%7D%22%2C%22tradeNo%22%3A%222018050110523106940000042339%22%2C%22payTime%22%3Anull%2C%22buyerPayAmount%22%3Anull%2C%22orderCode%22%3Anull%2C%22discAmount%22%3Anull%7D%7D
+[INFO ] 2018-05-01 10:52:34,167 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 10:52:34,183 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[000000]
+[INFO ] 2018-05-01 10:52:34,183 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[成功]
+[INFO ] 2018-05-01 10:52:34,183 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{
+		"tradeNo":"2018050110523106940000042339",
+		"credential":"{\"submitUrl\":\"http://61.129.71.103:8003/allChannelPayAdapter\",\"payMode\":\"bank_pc\",\"params\":{\"bizType\":\"000201\",\"realSumbitUrl\":\"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq\",\"txnSubType\":\"01\",\"backUrl\":\"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify\",\"signature\":\"WWoak0pMP+4k78ZVk1OTuDOfVnl9xXeCJ4tuL+R2NiksvfJHYBRYL6L+ERtzLdrR61TxT+iM6S1NecDUKc5DN/Y61pskBziA0kEAQSziKCBPnh3wakL3INJjglGGIYTAbvwNbdTB+EKBZBnXu/SX60Mi8gsQeN6QzAYWrg/G1yo=\",\"orderId\":\"WG20180501071049300000000000004\",\"issInsCode\":\"ABC\",\"merName\":\"测试商户\",\"txnType\":\"01\",\"frontUrl\":\"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay\",\"channelType\":\"07\",\"certId\":\"40220995861346480087409489142384722381\",\"acqInsCode\":\"48272900\",\"encoding\":\"UTF-8\",\"version\":\"5.0.0\",\"merAbbr\":\"测试商户\",\"accessType\":\"0\",\"txnTime\":\"20180501105232\",\"merId\":\"777290058112148\",\"merCatCode\":\"5811\",\"currencyCode\":\"156\",\"txnAmt\":\"1\",\"signMethod\":\"01\"}}"
+	},
+	"head":{
+		"respCode":"000000",
+		"respMsg":"成功",
+		"respTime":"20180501105232",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 10:52:34,183 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:100)
+网银下单成功
+[INFO ] 2018-05-01 10:52:34,183 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:101)
+生成的支付凭证为：{"submitUrl":"http://61.129.71.103:8003/allChannelPayAdapter","payMode":"bank_pc","params":{"bizType":"000201","realSumbitUrl":"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq","txnSubType":"01","backUrl":"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify","signature":"WWoak0pMP+4k78ZVk1OTuDOfVnl9xXeCJ4tuL+R2NiksvfJHYBRYL6L+ERtzLdrR61TxT+iM6S1NecDUKc5DN/Y61pskBziA0kEAQSziKCBPnh3wakL3INJjglGGIYTAbvwNbdTB+EKBZBnXu/SX60Mi8gsQeN6QzAYWrg/G1yo=","orderId":"WG20180501071049300000000000004","issInsCode":"ABC","merName":"测试商户","txnType":"01","frontUrl":"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay","channelType":"07","certId":"40220995861346480087409489142384722381","acqInsCode":"48272900","encoding":"UTF-8","version":"5.0.0","merAbbr":"测试商户","accessType":"0","txnTime":"20180501105232","merId":"777290058112148","merCatCode":"5811","currencyCode":"156","txnAmt":"1","signMethod":"01"}}
+[INFO ] 2018-05-01 10:53:24,449 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 10:53:24,449 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 10:53:24,465 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 10:53:24,465 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 10:53:24,465 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 10:53:24,465 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 10:53:24,465 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 10:53:24,715 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"orderCode":"2018050110523264","extend":""},"head":{"channelType":"07","reqTime":"20180501105324","method":"sandpay.trade.query","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 10:53:24,731 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/query
+[INFO ] 2018-05-01 10:53:25,903 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 10:53:25,913 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DKyXfemCRok3XG4DFEou8QtZ%2Fn2BCrWBml%2B1v5SqJ9cSyZUjq2I8wcoZeqLfcQy6pBbP8XE1jDq4ktkXpLHWaIN7ntAyAy58PWjWPiZMlng%2FgzsMZAoiuBkTW33Rq6WKLV24i3FZJ7bLAgMSZPsFJ1jhKobW9YIpIiBAdfMeJi028IG6%2B9HC1IOMk1dylnBQUuUBfJp0LcDFyh%2BymfxRq0b7U0JsUPZDsqvfHzvTFAMR3jGO9LzgCABZC98nernuzp2dmssKRVDxppQ%2FkDlTpPoEtPiyRdhNE1A%2B%2FcqX%2B3tk7ALkc43Ctrvz4DZRB9XcJWPUl8%2FLD4yy288mXH61fuQ%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501105324%22%2C%22respMsg%22%3A%22%E6%88%90%E5%8A%9F%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22000000%22%7D%2C%22body%22%3A%7B%22totalAmount%22%3A%220.01%22%2C%22orderMsg%22%3A%22%E8%AE%A2%E5%8D%95%E5%A4%84%E7%90%86%E4%B8%AD%22%2C%22clearDate%22%3A%22%22%2C%22oriOrderCode%22%3A%222018050110523264%22%2C%22payTime%22%3A%22%22%2C%22oriRespMsg%22%3A%22DEFAULT%22%2C%22buyerPayAmount%22%3A%220.00%22%2C%22orderStatus%22%3A%2201%22%2C%22oriTradeNo%22%3A%222018050110523106940000042339%22%2C%22bankserial%22%3A%22%22%2C%22discAmount%22%3A%220.00%22%2C%22oriRespCode%22%3A%22999999%22%7D%7D
+[INFO ] 2018-05-01 10:53:25,913 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 10:53:25,928 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[000000]
+[INFO ] 2018-05-01 10:53:25,928 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[成功]
+[INFO ] 2018-05-01 10:53:25,928 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{
+		"buyerPayAmount":"0.00",
+		"oriRespCode":"999999",
+		"oriTradeNo":"2018050110523106940000042339",
+		"oriOrderCode":"2018050110523264",
+		"totalAmount":"0.01",
+		"clearDate":"",
+		"oriRespMsg":"DEFAULT",
+		"discAmount":"0.00",
+		"orderStatus":"01",
+		"payTime":"",
+		"orderMsg":"订单处理中",
+		"bankserial":""
+	},
+	"head":{
+		"respCode":"000000",
+		"respMsg":"成功",
+		"respTime":"20180501105324",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 10:53:25,928 method:cn.com.sandpay.gateway.demo.OrderQueryDemo.main(OrderQueryDemo.java:68)
+查询成功
+[INFO ] 2018-05-01 10:53:42,619 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 10:53:42,619 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 10:53:42,635 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 10:53:42,635 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 10:53:42,635 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 10:53:42,635 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 10:53:42,635 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 10:53:42,900 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"refundReason":"退货测试","refundAmount":"000000000001","orderCode":"2018050110534216","extend":"","oriOrderCode":"2018050110523264","notifyUrl":"http://127.0.0.1/notify"},"head":{"channelType":"07","reqTime":"20180501105342","method":"sandpay.trade.refund","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 10:53:42,916 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/refund
+[INFO ] 2018-05-01 10:53:43,245 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 10:53:43,245 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DEXHKXumOdV8FlQqVr3msRcWUDO8j6r9Rvu2vzUl0xFxzvu5aOOewwcUCiIJVO%2BGiK03iyOnJU4KfwN4eEmcF%2BhWTb1KREZqA5tO67HAn1kxoeN9Or0tVpmDdQzIUi4VrNwcBCm20NaTdvD35dpBYJqYkx7E%2FGKXFgIHH%2Fd%2Fhi4iq%2FrMZqfAbDSomjZUjN4BmNWBMWcv34ZzOXP%2BTotgA5yM3X%2BLQxSvL7J0mO%2B3nPJLhSBKYHSlnMNnCrnYJQ0lvJy2wnyRPurRD%2Fbupr4f00skTJBjk1ivmXTeMqt%2B2bm7kW%2BkjwmopyWzZVdTK7u59%2FysZTJ4VXtJDP2HdSlazww%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501105341%22%2C%22respMsg%22%3A%22%E5%8E%9F%E6%94%AF%E4%BB%98%E8%AE%A2%E5%8D%95%E6%9C%AA%E6%88%90%E5%8A%9F%EF%BC%8C%E6%97%A0%E6%B3%95%E9%80%80%E6%AC%BE%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22030009%22%7D%2C%22body%22%3A%7B%7D%7D
+[INFO ] 2018-05-01 10:53:43,260 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 10:53:43,276 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[030009]
+[INFO ] 2018-05-01 10:53:43,276 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[原支付订单未成功，无法退款]
+[INFO ] 2018-05-01 10:53:43,276 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{},
+	"head":{
+		"respCode":"030009",
+		"respMsg":"原支付订单未成功，无法退款",
+		"respTime":"20180501105341",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 10:53:55,792 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 10:53:56,058 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"refundReason":"退货测试","refundAmount":"000000000001","orderCode":"2018050110535571","extend":"","oriOrderCode":"2018050110523263","notifyUrl":"http://127.0.0.1/notify"},"head":{"channelType":"07","reqTime":"20180501105355","method":"sandpay.trade.refund","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 10:53:56,074 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/refund
+[INFO ] 2018-05-01 10:53:56,402 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 10:53:56,402 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DwCxHpXAd6a6FB0wArQ4YoyeQiG6XWP6ZzLxedf2uCMkcc%2Ba0h8LAi%2BEl8hv5UDO0TJ2TsWfutB5PrGDrkujSCy29cmr63VUWYfYT1nz1JD%2FnZ3fXhqHdy7rrB7Jze04uTdzRrVibFct05esUwHxCArYLlP6ZIUCOnyCGoCRuIQ8wE3YGgc6xFgvrwFgCPaDPa1xpA2QdkOQ6LrY%2BqOpiVeySQoqsl4ZhDaqLNf4Iz6agZ3wee15zvWKLrOsU4HJ%2FLgYZ6ru1s9DjlohJT5BJ1wBMQ%2Bc0MfKOvDqA1VA61VLgGfnxVEDbEf2vkV0Qi0XCwmCygE8vRuDdPB1dJJoFOg%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501105354%22%2C%22respMsg%22%3A%22%E5%8E%9F%E8%AE%A2%E5%8D%95%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%88%96%E6%94%AF%E4%BB%98%E4%B8%AD%2F%E5%B7%B2%E6%94%AF%E4%BB%98%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22030006%22%7D%2C%22body%22%3A%7B%7D%7D
+[INFO ] 2018-05-01 10:53:56,402 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 10:53:56,418 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[030006]
+[INFO ] 2018-05-01 10:53:56,418 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[原订单不存在或支付中/已支付]
+[INFO ] 2018-05-01 10:53:56,418 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{},
+	"head":{
+		"respCode":"030006",
+		"respMsg":"原订单不存在或支付中/已支付",
+		"respTime":"20180501105354",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 16:10:03,949 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 16:10:03,952 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 16:10:03,955 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 16:10:03,955 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 16:10:03,955 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 16:10:03,957 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 16:10:03,957 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 16:10:04,258 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","operatorId":"","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","orderCode":"201805011610048","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502161004","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501161004","method":"sandpay.trade.pay","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 16:10:04,280 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[ERROR] 2018-05-01 16:10:25,469 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:107)
+Connect to 61.129.71.103:8003 [/61.129.71.103] failed: Connection timed out: connect
+[INFO ] 2018-05-01 16:10:33,305 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 16:10:33,307 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 16:10:33,311 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 16:10:33,311 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 16:10:33,311 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 16:10:33,313 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 16:10:33,313 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 16:10:33,600 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","operatorId":"","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","orderCode":"2018050116103357","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502161033","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501161033","method":"sandpay.trade.pay","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 16:10:33,619 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 16:10:43,683 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 16:10:43,685 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3Dl763GFOsgevs8UMVmFIS4r4i2IAYf3lmWzbrSpzC28T%2BwN33Jc%2FoH3LG5MHgDXuTS%2F05ow4cF0CfQOcTJQHh9lcWH1k70fkm545Jd6oBLjhbQc4Esos5n5enUPTDjoBVJuP0ivgkMkUK7CVRmZLocWn2HkITVwaexA09lfsJlA2o9ZohkMVrcS5gpW7YG1dN5XHE%2FydXwakbr%2FcGSIAFJDIxxtNfNRTWcmD8C%2B06D1I2PQ%2By0QN437jfR2IunsNSxBqQWwE%2BsrH4SiPZw4nMlj3Ve8HwLn7Vb%2Bj73Kipytxy1Cdu8CdBQNWwffZvDS84ScsjrrjGpIUYaFLly%2Bl6KQ%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501161042%22%2C%22respMsg%22%3A%22%E6%88%90%E5%8A%9F%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22000000%22%7D%2C%22body%22%3A%7B%22totalAmount%22%3Anull%2C%22clearDate%22%3Anull%2C%22credential%22%3A%22%7B%5C%22submitUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2FallChannelPayAdapter%5C%22%2C%5C%22payMode%5C%22%3A%5C%22bank_pc%5C%22%2C%5C%22params%5C%22%3A%7B%5C%22bizType%5C%22%3A%5C%22000201%5C%22%2C%5C%22realSumbitUrl%5C%22%3A%5C%22http%3A%2F%2F172.28.247.112%3A8091%2Fbaffle-fjunionpay%2Funionpay%2FfrontTransReq%5C%22%2C%5C%22txnSubType%5C%22%3A%5C%2201%5C%22%2C%5C%22backUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A9988%2Frequest%2FfjUnionpayInternetBankNotify%5C%22%2C%5C%22signature%5C%22%3A%5C%22hUOD9cUsH1j4CZEIHgwHeru0wBeDlQdsnz874swPnSAj3ttYGhvlRPgRg%2B%2FAfdjpVyRHJzAk6nfQAmCjdiJCEGtUZH8VSYmmqCO3nGQf07rPbAaYx2TsAAvhdRuCvPPCAYEoSTFYxpha79Z0nhUh2CIwixqLtvLsn187b3tNy94%3D%5C%22%2C%5C%22orderId%5C%22%3A%5C%22WG20180501071025200000000000025%5C%22%2C%5C%22issInsCode%5C%22%3A%5C%22ABC%5C%22%2C%5C%22merName%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22txnType%5C%22%3A%5C%2201%5C%22%2C%5C%22frontUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2Fgateway%2Fapi%2Forder%2Fnotice%2FallChannelPay%5C%22%2C%5C%22channelType%5C%22%3A%5C%2207%5C%22%2C%5C%22certId%5C%22%3A%5C%2240220995861346480087409489142384722381%5C%22%2C%5C%22acqInsCode%5C%22%3A%5C%2248272900%5C%22%2C%5C%22encoding%5C%22%3A%5C%22UTF-8%5C%22%2C%5C%22version%5C%22%3A%5C%225.0.0%5C%22%2C%5C%22merAbbr%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22accessType%5C%22%3A%5C%220%5C%22%2C%5C%22txnTime%5C%22%3A%5C%2220180501161041%5C%22%2C%5C%22merId%5C%22%3A%5C%22777290058112148%5C%22%2C%5C%22merCatCode%5C%22%3A%5C%225811%5C%22%2C%5C%22currencyCode%5C%22%3A%5C%22156%5C%22%2C%5C%22txnAmt%5C%22%3A%5C%221%5C%22%2C%5C%22signMethod%5C%22%3A%5C%2201%5C%22%7D%7D%22%2C%22tradeNo%22%3A%222018050116104106880000242639%22%2C%22payTime%22%3Anull%2C%22buyerPayAmount%22%3Anull%2C%22orderCode%22%3Anull%2C%22discAmount%22%3Anull%7D%7D
+[INFO ] 2018-05-01 16:10:43,687 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 16:10:43,709 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[000000]
+[INFO ] 2018-05-01 16:10:43,709 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[成功]
+[INFO ] 2018-05-01 16:10:43,710 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{
+		"tradeNo":"2018050116104106880000242639",
+		"credential":"{\"submitUrl\":\"http://61.129.71.103:8003/allChannelPayAdapter\",\"payMode\":\"bank_pc\",\"params\":{\"bizType\":\"000201\",\"realSumbitUrl\":\"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq\",\"txnSubType\":\"01\",\"backUrl\":\"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify\",\"signature\":\"hUOD9cUsH1j4CZEIHgwHeru0wBeDlQdsnz874swPnSAj3ttYGhvlRPgRg+/AfdjpVyRHJzAk6nfQAmCjdiJCEGtUZH8VSYmmqCO3nGQf07rPbAaYx2TsAAvhdRuCvPPCAYEoSTFYxpha79Z0nhUh2CIwixqLtvLsn187b3tNy94=\",\"orderId\":\"WG20180501071025200000000000025\",\"issInsCode\":\"ABC\",\"merName\":\"测试商户\",\"txnType\":\"01\",\"frontUrl\":\"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay\",\"channelType\":\"07\",\"certId\":\"40220995861346480087409489142384722381\",\"acqInsCode\":\"48272900\",\"encoding\":\"UTF-8\",\"version\":\"5.0.0\",\"merAbbr\":\"测试商户\",\"accessType\":\"0\",\"txnTime\":\"20180501161041\",\"merId\":\"777290058112148\",\"merCatCode\":\"5811\",\"currencyCode\":\"156\",\"txnAmt\":\"1\",\"signMethod\":\"01\"}}"
+	},
+	"head":{
+		"respCode":"000000",
+		"respMsg":"成功",
+		"respTime":"20180501161042",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 16:10:43,710 method:cn.com.sandpay.gateway.demo.OrderCreateBankPcDemo.main(OrderCreateBankPcDemo.java:100)
+网银下单成功
+[INFO ] 2018-05-01 16:10:43,711 method:cn.com.sandpay.gateway.demo.OrderCreateBankPcDemo.main(OrderCreateBankPcDemo.java:101)
+生成的支付凭证为：{"submitUrl":"http://61.129.71.103:8003/allChannelPayAdapter","payMode":"bank_pc","params":{"bizType":"000201","realSumbitUrl":"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq","txnSubType":"01","backUrl":"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify","signature":"hUOD9cUsH1j4CZEIHgwHeru0wBeDlQdsnz874swPnSAj3ttYGhvlRPgRg+/AfdjpVyRHJzAk6nfQAmCjdiJCEGtUZH8VSYmmqCO3nGQf07rPbAaYx2TsAAvhdRuCvPPCAYEoSTFYxpha79Z0nhUh2CIwixqLtvLsn187b3tNy94=","orderId":"WG20180501071025200000000000025","issInsCode":"ABC","merName":"测试商户","txnType":"01","frontUrl":"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay","channelType":"07","certId":"40220995861346480087409489142384722381","acqInsCode":"48272900","encoding":"UTF-8","version":"5.0.0","merAbbr":"测试商户","accessType":"0","txnTime":"20180501161041","merId":"777290058112148","merCatCode":"5811","currencyCode":"156","txnAmt":"1","signMethod":"01"}}
+[INFO ] 2018-05-01 16:34:01,396 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 16:34:01,399 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 16:34:01,402 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 16:34:01,402 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 16:34:01,402 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 16:34:01,403 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 16:34:01,404 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 16:34:01,660 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","operatorId":"","orderCode":"2018050116340123","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502163401","clearCycle":"","terminalId":"","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501163401","method":"sandpay.trade.pay","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 16:34:01,680 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 16:34:01,936 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 16:34:01,938 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DcF179X49gIz%2B8AgNmxFCHBdzHwCr0p8ANGardJAp1qDF80%2F3QOWfcW2V4%2BZei9SiZc%2BewiLPNlieCZNgyjEBlc0PPCeNXcK9%2FUWQeOLFKGzZsCbh1B0dde3RQI9D0FiXV%2FDohmSvO7R9QT2GEFPcDa5llK5dEkxIcvEIuENSYVLOWFfj57c13FZPmcX7OFOLgH3wJHHPAaSrlr9F3TVOTW5RH0MbNtZ1M%2BnnRno4R0pQt0DKZhTYMUtNHKGig%2FXHdEbGzX6ZHOjcFxzhjZ0Am7AgdQff2J8ey695l4jfAggQk2jUc%2B1SoNIY2GjPxLirENKCKsI%2FKG0tfixYa7FTvQ%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501163359%22%2C%22respMsg%22%3A%22%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%9C%89%E8%AF%AF%3A+%5BpayMode%5D%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22020001%22%7D%2C%22body%22%3A%7B%7D%7D
+[INFO ] 2018-05-01 16:34:01,939 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 16:34:01,963 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[020001]
+[INFO ] 2018-05-01 16:34:01,963 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[请求参数有误: [payMode]]
+[INFO ] 2018-05-01 16:34:01,963 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{},
+	"head":{
+		"respCode":"020001",
+		"respMsg":"请求参数有误: [payMode]",
+		"respTime":"20180501163359",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 16:41:37,911 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 16:41:37,913 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 16:41:37,916 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 16:41:37,917 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 16:41:37,917 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 16:41:37,918 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 16:41:37,918 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 16:41:38,184 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","operatorId":"","orderCode":"2018050116413855","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502164138","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501164138","method":"sandpay.trade.pay","mid":"90000061","accessType":"1","productId":"00000007","version":"1.0"}}
+[INFO ] 2018-05-01 16:41:38,204 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 16:41:39,058 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 16:41:39,060 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:104)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DcNbRYvDgj01CmmfhQ2shaJ9kAGU52xLiaycyXRKeLcCb2WJBm0V9ExE4ea0UHkbX06pb6NPpZamW%2Fcm1O7sace%2Bi41UUnIIxd8pu%2BFM9WWJoGCIeAqulS4xVl4%2FmP82Y6f2Qu3rh86Uux0tjiCD%2BF1MlLvbeyHF6bgptzhfSk45tNAOuT4S7vCpPLA8qDD%2Bl6xYOQg3Megqfmx0eB6yhB5WMrH0uuMhcps1VTEBH1z5GdQfrl4l6TpcbPA7P0PIsrYIAiKvpDgzUynRPXRXIa4U8OpgXILFJWHHbFI%2FbnjQmOZAuU2upz0eeyY7UfiBsON10%2BDG0qyY%2FykJDP07z3A%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501164137%22%2C%22respMsg%22%3A%22%E6%88%90%E5%8A%9F%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22000000%22%7D%2C%22body%22%3A%7B%22totalAmount%22%3Anull%2C%22clearDate%22%3Anull%2C%22credential%22%3A%22%7B%5C%22submitUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2FallChannelPayAdapter%5C%22%2C%5C%22payMode%5C%22%3A%5C%22bank_pc%5C%22%2C%5C%22params%5C%22%3A%7B%5C%22bizType%5C%22%3A%5C%22000201%5C%22%2C%5C%22realSumbitUrl%5C%22%3A%5C%22http%3A%2F%2F172.28.247.112%3A8091%2Fbaffle-fjunionpay%2Funionpay%2FfrontTransReq%5C%22%2C%5C%22txnSubType%5C%22%3A%5C%2201%5C%22%2C%5C%22backUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A9988%2Frequest%2FfjUnionpayInternetBankNotify%5C%22%2C%5C%22signature%5C%22%3A%5C%22I9DWBJHPK%2FoKtqF%2FPrOvo3ut%2BdtbscHT1PLl7%2FkkG9k33esSxC1Eq0U92VzAVoRLZVEg7PBR7LDcHjJZqxt10RXUvp%2FuyhyTS0bvpRkf1n1H5fO%2BPFSu2kqOsu7ol%2B%2FwK2TzBdzOvITpwW2BmhJoh1LSFQK6irjH9f1kE9%2Bf2gs%3D%5C%22%2C%5C%22orderId%5C%22%3A%5C%22WG20180501071090500000000000026%5C%22%2C%5C%22issInsCode%5C%22%3A%5C%22ABC%5C%22%2C%5C%22merName%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22txnType%5C%22%3A%5C%2201%5C%22%2C%5C%22frontUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2Fgateway%2Fapi%2Forder%2Fnotice%2FallChannelPay%5C%22%2C%5C%22channelType%5C%22%3A%5C%2207%5C%22%2C%5C%22certId%5C%22%3A%5C%2240220995861346480087409489142384722381%5C%22%2C%5C%22acqInsCode%5C%22%3A%5C%2248272900%5C%22%2C%5C%22encoding%5C%22%3A%5C%22UTF-8%5C%22%2C%5C%22version%5C%22%3A%5C%225.0.0%5C%22%2C%5C%22merAbbr%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22accessType%5C%22%3A%5C%220%5C%22%2C%5C%22txnTime%5C%22%3A%5C%2220180501164137%5C%22%2C%5C%22merId%5C%22%3A%5C%22777290058112148%5C%22%2C%5C%22merCatCode%5C%22%3A%5C%225811%5C%22%2C%5C%22currencyCode%5C%22%3A%5C%22156%5C%22%2C%5C%22txnAmt%5C%22%3A%5C%221%5C%22%2C%5C%22signMethod%5C%22%3A%5C%2201%5C%22%7D%7D%22%2C%22tradeNo%22%3A%222018050116413708880000256753%22%2C%22payTime%22%3Anull%2C%22buyerPayAmount%22%3Anull%2C%22orderCode%22%3Anull%2C%22discAmount%22%3Anull%7D%7D
+[INFO ] 2018-05-01 16:41:39,062 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+verify sign success
+[INFO ] 2018-05-01 16:41:39,084 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应码：[000000]
+[INFO ] 2018-05-01 16:41:39,084 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:129)
+响应描述：[成功]
+[INFO ] 2018-05-01 16:41:39,085 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:130)
+响应报文：
+{
+	"body":{
+		"tradeNo":"2018050116413708880000256753",
+		"credential":"{\"submitUrl\":\"http://61.129.71.103:8003/allChannelPayAdapter\",\"payMode\":\"bank_pc\",\"params\":{\"bizType\":\"000201\",\"realSumbitUrl\":\"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq\",\"txnSubType\":\"01\",\"backUrl\":\"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify\",\"signature\":\"I9DWBJHPK/oKtqF/PrOvo3ut+dtbscHT1PLl7/kkG9k33esSxC1Eq0U92VzAVoRLZVEg7PBR7LDcHjJZqxt10RXUvp/uyhyTS0bvpRkf1n1H5fO+PFSu2kqOsu7ol+/wK2TzBdzOvITpwW2BmhJoh1LSFQK6irjH9f1kE9+f2gs=\",\"orderId\":\"WG20180501071090500000000000026\",\"issInsCode\":\"ABC\",\"merName\":\"测试商户\",\"txnType\":\"01\",\"frontUrl\":\"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay\",\"channelType\":\"07\",\"certId\":\"40220995861346480087409489142384722381\",\"acqInsCode\":\"48272900\",\"encoding\":\"UTF-8\",\"version\":\"5.0.0\",\"merAbbr\":\"测试商户\",\"accessType\":\"0\",\"txnTime\":\"20180501164137\",\"merId\":\"777290058112148\",\"merCatCode\":\"5811\",\"currencyCode\":\"156\",\"txnAmt\":\"1\",\"signMethod\":\"01\"}}"
+	},
+	"head":{
+		"respCode":"000000",
+		"respMsg":"成功",
+		"respTime":"20180501164137",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 16:41:39,085 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:127)
+下单成功
+[INFO ] 2018-05-01 16:41:39,086 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:128)
+生成的支付凭证为：{"submitUrl":"http://61.129.71.103:8003/allChannelPayAdapter","payMode":"bank_pc","params":{"bizType":"000201","realSumbitUrl":"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq","txnSubType":"01","backUrl":"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify","signature":"I9DWBJHPK/oKtqF/PrOvo3ut+dtbscHT1PLl7/kkG9k33esSxC1Eq0U92VzAVoRLZVEg7PBR7LDcHjJZqxt10RXUvp/uyhyTS0bvpRkf1n1H5fO+PFSu2kqOsu7ol+/wK2TzBdzOvITpwW2BmhJoh1LSFQK6irjH9f1kE9+f2gs=","orderId":"WG20180501071090500000000000026","issInsCode":"ABC","merName":"测试商户","txnType":"01","frontUrl":"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay","channelType":"07","certId":"40220995861346480087409489142384722381","acqInsCode":"48272900","encoding":"UTF-8","version":"5.0.0","merAbbr":"测试商户","accessType":"0","txnTime":"20180501164137","merId":"777290058112148","merCatCode":"5811","currencyCode":"156","txnAmt":"1","signMethod":"01"}}
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-01 20:47:20,359 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-01 20:47:20,641 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:98)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","payExtra":"{\"payType\":\"1\",\"bankCode\":\"01030000\"}","operatorId":"","orderCode":"2018050120472075","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180502204720","clearCycle":"","terminalId":"","payMode":"bank_pc","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180501204720","method":"sandpay.trade.pay","mid":"90000061","productId":"00000007","accessType":"1","version":"1.0"}}
+[INFO ] 2018-05-01 20:47:20,656 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-01 20:47:21,829 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-01 20:47:21,839 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:100)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3DR2uEbZhb1ucZUAGC41ZJRhaKFF5PK95z34EFUXE4jX8XAOm%2FX62Xqa82sle1q5giCUfR5GAScdNs1feQC2RdQtYD75VUfa3BG35T4LseoyWf2sxD49UrlmMc5bCVTuXX86ckYshuUYNHjKhsc9gTukmJf8CgJVjT51dPER6t9XC46SDmI9RwSQXEGtp4GvB%2B2%2FxDgZWpSo7Zxdhqh9b8I%2FDtMneqirl0lCwmAXUJh%2Frc7eD3yS2vCLOaeOeyAq9NLTETYq71cA8Zqe8jwTuVPhM6O0G91Im9yqWsXmqc6XeG9yZ8ZgweI13eABVECX7bh8ZOyROIPZpI45jn%2Fpc36g%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180501204720%22%2C%22respMsg%22%3A%22%E6%88%90%E5%8A%9F%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22000000%22%7D%2C%22body%22%3A%7B%22totalAmount%22%3Anull%2C%22clearDate%22%3Anull%2C%22credential%22%3A%22%7B%5C%22submitUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2FallChannelPayAdapter%5C%22%2C%5C%22payMode%5C%22%3A%5C%22bank_pc%5C%22%2C%5C%22params%5C%22%3A%7B%5C%22bizType%5C%22%3A%5C%22000201%5C%22%2C%5C%22realSumbitUrl%5C%22%3A%5C%22http%3A%2F%2F172.28.247.112%3A8091%2Fbaffle-fjunionpay%2Funionpay%2FfrontTransReq%5C%22%2C%5C%22txnSubType%5C%22%3A%5C%2201%5C%22%2C%5C%22backUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A9988%2Frequest%2FfjUnionpayInternetBankNotify%5C%22%2C%5C%22signature%5C%22%3A%5C%22G5QeaacNb%2BoaXvxou6%2F7LPFNZ%2FHQ3R4dB10TLWRJf0JfrrqkoiA0vBCR0o8jfBXaQFCkEBd7CVfkC9gE%2FXjkp7cS4jGzhQUPTAzfA5aWZlSMvv%2FTNaNDUrMOMn3pZHQKgMpMAZL%2FYiVXRfIeJz53u4H6yRI7qBlkvR3uSVTL8OM%3D%5C%22%2C%5C%22orderId%5C%22%3A%5C%22WG20180501071060600000000000041%5C%22%2C%5C%22issInsCode%5C%22%3A%5C%22ABC%5C%22%2C%5C%22merName%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22txnType%5C%22%3A%5C%2201%5C%22%2C%5C%22frontUrl%5C%22%3A%5C%22http%3A%2F%2F61.129.71.103%3A8003%2Fgateway%2Fapi%2Forder%2Fnotice%2FallChannelPay%5C%22%2C%5C%22channelType%5C%22%3A%5C%2207%5C%22%2C%5C%22certId%5C%22%3A%5C%2240220995861346480087409489142384722381%5C%22%2C%5C%22acqInsCode%5C%22%3A%5C%2248272900%5C%22%2C%5C%22encoding%5C%22%3A%5C%22UTF-8%5C%22%2C%5C%22version%5C%22%3A%5C%225.0.0%5C%22%2C%5C%22merAbbr%5C%22%3A%5C%22%E6%B5%8B%E8%AF%95%E5%95%86%E6%88%B7%5C%22%2C%5C%22accessType%5C%22%3A%5C%220%5C%22%2C%5C%22txnTime%5C%22%3A%5C%2220180501204720%5C%22%2C%5C%22merId%5C%22%3A%5C%22777290058112148%5C%22%2C%5C%22merCatCode%5C%22%3A%5C%225811%5C%22%2C%5C%22currencyCode%5C%22%3A%5C%22156%5C%22%2C%5C%22txnAmt%5C%22%3A%5C%221%5C%22%2C%5C%22signMethod%5C%22%3A%5C%2201%5C%22%7D%7D%22%2C%22tradeNo%22%3A%222018050120472002040000409231%22%2C%22payTime%22%3Anull%2C%22buyerPayAmount%22%3Anull%2C%22orderCode%22%3Anull%2C%22discAmount%22%3Anull%7D%7D
+[INFO ] 2018-05-01 20:47:21,839 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:121)
+verify sign success
+[INFO ] 2018-05-01 20:47:21,854 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:124)
+响应码：[000000]
+[INFO ] 2018-05-01 20:47:21,854 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:125)
+响应描述：[成功]
+[INFO ] 2018-05-01 20:47:21,854 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:126)
+响应报文：
+{
+	"body":{
+		"tradeNo":"2018050120472002040000409231",
+		"credential":"{\"submitUrl\":\"http://61.129.71.103:8003/allChannelPayAdapter\",\"payMode\":\"bank_pc\",\"params\":{\"bizType\":\"000201\",\"realSumbitUrl\":\"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq\",\"txnSubType\":\"01\",\"backUrl\":\"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify\",\"signature\":\"G5QeaacNb+oaXvxou6/7LPFNZ/HQ3R4dB10TLWRJf0JfrrqkoiA0vBCR0o8jfBXaQFCkEBd7CVfkC9gE/Xjkp7cS4jGzhQUPTAzfA5aWZlSMvv/TNaNDUrMOMn3pZHQKgMpMAZL/YiVXRfIeJz53u4H6yRI7qBlkvR3uSVTL8OM=\",\"orderId\":\"WG20180501071060600000000000041\",\"issInsCode\":\"ABC\",\"merName\":\"测试商户\",\"txnType\":\"01\",\"frontUrl\":\"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay\",\"channelType\":\"07\",\"certId\":\"40220995861346480087409489142384722381\",\"acqInsCode\":\"48272900\",\"encoding\":\"UTF-8\",\"version\":\"5.0.0\",\"merAbbr\":\"测试商户\",\"accessType\":\"0\",\"txnTime\":\"20180501204720\",\"merId\":\"777290058112148\",\"merCatCode\":\"5811\",\"currencyCode\":\"156\",\"txnAmt\":\"1\",\"signMethod\":\"01\"}}"
+	},
+	"head":{
+		"respCode":"000000",
+		"respMsg":"成功",
+		"respTime":"20180501204720",
+		"version":"1.0"
+	}
+}
+[INFO ] 2018-05-01 20:47:21,854 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:177)
+下单成功
+[INFO ] 2018-05-01 20:47:21,854 method:cn.com.sandpay.gateway.demo.OrderCreateDemo.main(OrderCreateDemo.java:178)
+生成的支付凭证为：{"submitUrl":"http://61.129.71.103:8003/allChannelPayAdapter","payMode":"bank_pc","params":{"bizType":"000201","realSumbitUrl":"http://172.28.247.112:8091/baffle-fjunionpay/unionpay/frontTransReq","txnSubType":"01","backUrl":"http://61.129.71.103:9988/request/fjUnionpayInternetBankNotify","signature":"G5QeaacNb+oaXvxou6/7LPFNZ/HQ3R4dB10TLWRJf0JfrrqkoiA0vBCR0o8jfBXaQFCkEBd7CVfkC9gE/Xjkp7cS4jGzhQUPTAzfA5aWZlSMvv/TNaNDUrMOMn3pZHQKgMpMAZL/YiVXRfIeJz53u4H6yRI7qBlkvR3uSVTL8OM=","orderId":"WG20180501071060600000000000041","issInsCode":"ABC","merName":"测试商户","txnType":"01","frontUrl":"http://61.129.71.103:8003/gateway/api/order/notice/allChannelPay","channelType":"07","certId":"40220995861346480087409489142384722381","acqInsCode":"48272900","encoding":"UTF-8","version":"5.0.0","merAbbr":"测试商户","accessType":"0","txnTime":"20180501204720","merId":"777290058112148","merCatCode":"5811","currencyCode":"156","txnAmt":"1","signMethod":"01"}}

@@ -1,0 +1,41 @@
+[INFO ] 2018-05-02 13:26:44,037 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadPropertiesFromSrc(SDKConfig.java:130)
+从classpath: /D:/workspace/demo/sandpay-gateway-demo/build/classes/ 获取属性文件sand_sdk.properties
+[INFO ] 2018-05-02 13:26:44,040 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:163)
+开始从属性文件中加载配置项
+[INFO ] 2018-05-02 13:26:44,044 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:169)
+配置项：通讯地址==>sandsdk.url==>http://61.129.71.103:8003/gateway/api 已加载
+[INFO ] 2018-05-02 13:26:44,044 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:174)
+配置项：商户号==>sandsdk.mid==>90000061 已加载
+[INFO ] 2018-05-02 13:26:44,045 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:184)
+配置项：商户私钥证书路径==>sandsdk.signCert.path==>D:/certs/merch_private_cert_test.pfx 已加载
+[INFO ] 2018-05-02 13:26:44,046 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:189)
+配置项：商户私钥证书密码==>sandsdk.signCert.pwd==>123456 已加载
+[INFO ] 2018-05-02 13:26:44,046 method:cn.com.sandpay.cashier.sdk.SDKConfig.loadProperties(SDKConfig.java:194)
+配置项：杉德公钥证书路径==>sandsdk.sandCert.path==>D:/certs/sand_public_cert_test.cer 已加载
+[INFO ] 2018-05-02 13:26:44,326 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:100)
+请求报文：
+{"body":{"body":"用户购买话费0.01","frontUrl":"http://127.0.0.1/frontNotify","payExtra":"{\"“cardNo”\":\"6220000000000000001\"}","operatorId":"","orderCode":"2018050213264480","extend":"","bizExtendParams":"","subject":"话费充值","txnTimeOut":"20180503132644","clearCycle":"","terminalId":"","payMode":"sand_h5","merchExtendParams":"","totalAmount":"000000000001","royaltyInfo":"","riskRateInfo":"","clientIp":"192.168.22.55","notifyUrl":"http://127.0.0.1/notify","storeId":""},"head":{"channelType":"07","reqTime":"20180502132644","method":"sandpay.trade.pay","mid":"90000061","productId":"00000008","accessType":"1","version":"1.0"}}
+[INFO ] 2018-05-02 13:26:44,349 method:cn.com.sandpay.cashier.sdk.HttpClient.doPost(HttpClient.java:90)
+host:61.129.71.103,port:8003,protocol:http,path:/gateway/api/order/pay
+[INFO ] 2018-05-02 13:26:44,999 method:cn.com.sandpay.cashier.sdk.HttpClient$2.handleResponse(HttpClient.java:103)
+status:[200]
+[INFO ] 2018-05-02 13:26:45,004 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:102)
+响应报文：
+charset%3DUTF-8%26signType%3D01%26sign%3Dq%2BGBTB%2B7OEIFGUXTiZGJvRf%2FEeNgXbRcBn09%2Fm6lLzQC%2BZAt9q98px2h6f7z%2BqHutHWExFex%2B0OSIU%2FXYDE3AL4VuPjHA%2FxYAMvlLbITnPVd4Q73n0cfzgDMOD69aLpAB8ImhFfWW%2BYVsevzQwiEYVmW2QN5v%2Bur1hy1O2edrDn0beGovL%2BgpbbtXxnuKVaiZUFgtb11ihFfqVUcnYQCgMrbxOGIaFziwybupGRtG%2F4UH3ISENfRUG5FIpjmZeIwezqicKdJXwINKGqZuhNPT2VEX40M8IsxNGAemS26agKckeLH7JNEv7dhvpL4SXDqtVUZ%2BSP9Mbf2pGIhPySiEw%3D%3D%26data%3D%7B%22head%22%3A%7B%22respTime%22%3A%2220180502132643%22%2C%22respMsg%22%3A%22%E8%AE%A2%E5%8D%95%E5%88%9B%E5%BB%BA%E5%A4%B1%E8%B4%A5%22%2C%22version%22%3A%221.0%22%2C%22respCode%22%3A%22030013%22%7D%2C%22body%22%3A%7B%7D%7D
+[INFO ] 2018-05-02 13:26:45,006 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:123)
+verify sign success
+[INFO ] 2018-05-02 13:26:45,028 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:126)
+响应码：[030013]
+[INFO ] 2018-05-02 13:26:45,029 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:127)
+响应描述：[订单创建失败]
+[INFO ] 2018-05-02 13:26:45,029 method:cn.com.sandpay.gateway.demo.DemoBase.requestServer(DemoBase.java:128)
+响应报文：
+{
+	"body":{},
+	"head":{
+		"respCode":"030013",
+		"respMsg":"订单创建失败",
+		"respTime":"20180502132643",
+		"version":"1.0"
+	}
+}
